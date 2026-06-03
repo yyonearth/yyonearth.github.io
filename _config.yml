@@ -214,6 +214,7 @@ exclude:
   - "*.config.js"
   - "package*.json"
   - "*.sh"
+  - "*.ps1"
 
 jekyll-archives:
   enabled: [categories, tags]
