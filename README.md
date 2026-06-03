@@ -1,8 +1,8 @@
-# kikyoyuyu.github.io
+# yyonearth.github.io
 
 yuyu 的个人技术博客,基于 [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) 主题,通过 GitHub Actions 构建并部署到 GitHub Pages。
 
-🔗 在线地址:<https://kikyoyuyu911.github.io>
+🔗 在线地址:<https://yyonearth.github.io>
 
 ## 写新文章
 
