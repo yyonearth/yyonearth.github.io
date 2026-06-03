@@ -16,7 +16,7 @@ order: 4
 
 ## 联系我
 
-- GitHub:[@kikyoyuyu911](https://github.com/kikyoyuyu911)
+- GitHub:[@yyonearth](https://github.com/yyonearth)
 
 > 这一页可以随时编辑 `_tabs/about.md` 来补充更多介绍。
 {: .prompt-tip }
