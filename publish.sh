@@ -47,10 +47,10 @@ RUN_ID=""
 for i in $(seq 1 18); do
   sleep 10
   RUN_ID="$(api "https://api.github.com/repos/$OWNER_REPO/actions/runs?branch=main&per_page=1" \
-    | python -c "import sys,json;r=json.load(sys.stdin)['workflow_runs'];print(r[0]['id'] if r else '')" 2>/dev/null || true)"
+    | python -c "import sys,json;r=json.load(sys.stdin)['workflow_runs'];print(r[0]['id'] if r else '')" 2>/dev/null | tr -d '\r' || true)"
   [[ -z "$RUN_ID" ]] && continue
   read -r STATUS CONCL < <(api "https://api.github.com/repos/$OWNER_REPO/actions/runs/$RUN_ID" \
-    | python -c "import sys,json;r=json.load(sys.stdin);print(r['status'], r['conclusion'])" 2>/dev/null || echo "unknown unknown")
+    | python -c "import sys,json;r=json.load(sys.stdin);print(r['status'], r['conclusion'])" 2>/dev/null | tr -d '\r' || echo "unknown unknown")
   printf "   [%02d] status=%s conclusion=%s\n" "$i" "$STATUS" "$CONCL"
   if [[ "$STATUS" == "completed" ]]; then
     if [[ "$CONCL" == "success" ]]; then
